@@ -1,0 +1,25 @@
+name: Dev flow
+
+on: 
+    push:
+      branches:
+        - develop
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo lang nang kung ano2x
+              run: echo "yow yow build itow"
+    test:
+        needs: [build]
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo lang nang kung ano2x
+              run: echo "yow yow test itow"
+    deploy:
+        needs: [test]
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo lang nang kung ano2x
+              run: echo "yow yow  deploy itow"
+    
